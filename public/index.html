@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail Web Client</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📧 Gmail Web Client</h1>
+    
+    <div id="auth-section">
+      <a href="/auth/login" class="btn btn-primary">Google でログイン</a>
+    </div>
+    
+    <div id="app" style="display:none;">
+      <div class="inbox">
+        <h2>受信メール</h2>
+        <div id="email-list"></div>
+      </div>
+      
+      <div class="compose">
+        <h2>メール送信</h2>
+        <form id="send-form">
+          <input type="email" id="to" placeholder="宛先" required>
+          <input type="text" id="subject" placeholder="件名" required>
+          <textarea id="message" placeholder="メッセージ" rows="6" required></textarea>
+          <button type="submit" class="btn btn-success">送信</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
